@@ -33,6 +33,11 @@
 
 	<name>communication-service</name>
 	<description>Demo project for Spring Boot</description>
+	<scm>
+      		<connection>scm:git:https://jenkins@github.com/logistimo/communications-service.git</connection>
+      		<developerConnection>scm:git:https://jenkins@github.com/logistimo/communications-service.git</developerConnection>
+    	</scm>
+
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -88,6 +93,36 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+                		<groupId>org.apache.maven.plugins</groupId>
+                		<artifactId>maven-compiler-plugin</artifactId>
+                		<configuration>
+                    			<source>1.8</source>
+                    			<target>1.8</target>
+                		</configuration>
+            		</plugin>
+			<plugin>
+                		<groupId>org.apache.maven.plugins</groupId>
+                		<artifactId>maven-release-plugin</artifactId>
+                		<version>2.4.2</version>
+            		</plugin>
+            		<plugin>
+                		<groupId>org.apache.maven.plugins</groupId>
+	        		<artifactId>maven-scm-plugin</artifactId>
+	        		<version>1.11.2</version>
+	        		<configuration>
+		       			<providerImplementations>
+		              			<git>jgit</git>
+		       			</providerImplementations>
+	        		</configuration>
+	        		<dependencies>
+		       			<dependency>
+			       			<groupId>org.apache.maven.scm</groupId>
+			       			<artifactId>maven-scm-provider-jgit</artifactId>
+			       			<version>1.11.2</version>
+		       			</dependency>
+	        		</dependencies>
+	    		</plugin>
 		</plugins>
 	</build>
 
