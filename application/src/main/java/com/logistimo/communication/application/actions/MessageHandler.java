@@ -73,7 +73,7 @@ public class MessageHandler {
     this.validator = validator;
   }
 
-  @EndpointInject(uri = "activemq:notification-final")
+  @EndpointInject(uri = "activemq:notification-final-snapshot")
   public void setSubmitter(ProducerTemplate submitter) {
     this.submitter = submitter;
   }
