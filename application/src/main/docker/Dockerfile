@@ -31,8 +31,8 @@ ENV JAVA_OPTS="-Xms512M -Xmx1G" \
 	SERVICE_NAME=logi-communication \
 	APM_SERVER_URL=localhost:8200
 
-RUN wget -P $HOME/ http://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.7/jmx_prometheus_javaagent-0.7.jar \
-	&& wget -P $HOME/ http://repo1.maven.org/maven2/co/elastic/apm/elastic-apm-agent/0.6.0/elastic-apm-agent-0.6.0.jar
+RUN wget -P $HOME/ https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.7/jmx_prometheus_javaagent-0.7.jar \
+	&& wget -P $HOME/ https://repo1.maven.org/maven2/co/elastic/apm/elastic-apm-agent/0.6.0/elastic-apm-agent-0.6.0.jar
 
 ADD jmx_exporter.json $HOME/
 
